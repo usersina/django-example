@@ -20,14 +20,25 @@ pyenv activate django-example # Activate the virtualenv ()
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
 
-- Installing the dependencies and scaffolding the app
+- Installing the dependencies
 
 ```bash
 # Install deps
 pip install django
 
+# Write a requirements.txt file
+pip install pipreqs
+pipreqs .
+```
+
+- Scaffolding the app
+
+```bash
 # Create a new project
 django-admin startproject pollster .
+
+# Create an app
+python manage.py startapp polls
 ```
 
 ## Getting started
@@ -40,12 +51,6 @@ python manage.py migrate
 
 # Run the server
 python manage.py runserver
-```
-
-To create any subsequent apps in the project
-
-```bash
-python manage.py startapp polls
 ```
 
 ## Resources

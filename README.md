@@ -74,3 +74,4 @@ python manage.py migrate
 
 - [Python environments with pyenv and virtualenv](https://fathomtech.io/blog/python-environments-with-pyenv-and-vitualenv/)
 - [Managing virtual environments with pyenv](https://towardsdatascience.com/managing-virtual-environment-with-pyenv-ae6f3fb835f8)
+- [Python Django Crash Course](https://www.youtube.com/watch?v=e1IyzVyrLSU)

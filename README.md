@@ -5,7 +5,7 @@ It's almost a copy of the one used in the official django documentation.
 
 The steps below describe how the environment is initially setup and how to run it locally.
 
-## Initial setup
+## Initial setup (already configured)
 
 - Setting up a clean python environment with pyenv & virtualenv
 
@@ -43,9 +43,12 @@ python manage.py startapp polls
 
 ## Getting started
 
-Thanks to the first setup, whenever I open a terminal in this `django-example` directory, the python virtualenv will directly change to `(django-example)`.
+Thanks to the first setup, whenever a terminal session is started in this `django-example` directory, the python virtualenv will directly change to `(django-example)`.
 
 ```bash
+# Install the dependencies
+pip install -r requirements.txt
+
 # Run the initial migration
 python manage.py migrate
 
@@ -53,7 +56,21 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Resources
+## Useful commands
+
+- Creating a migration file for the polls app
+
+```bash
+python manage.py makemigrations polls
+```
+
+- Applying the migration
+
+```bash
+python manage.py migrate
+```
+
+### Resources
 
 - [Python environments with pyenv and virtualenv](https://fathomtech.io/blog/python-environments-with-pyenv-and-vitualenv/)
 - [Managing virtual environments with pyenv](https://towardsdatascience.com/managing-virtual-environment-with-pyenv-ae6f3fb835f8)

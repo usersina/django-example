@@ -16,8 +16,11 @@ pyenv virtualenvs # List virtual envs
 pyenv virtualenv django-example # Create a virtual env with the same name as the folder
 pyenv activate django-example # Activate the virtualenv ()
 
-# It is also recommended to add the following to the .bashrc or .zshrc to automatically activate virtualenvs
+# To automatically activate the virtualenv on folder change
+# 1. Add the following to your profile (.bashrc, .zshrc, etc...) to automatically activate virtualenvs
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
+# 2. Create a `.python-version` with the created virtualenv
+pyenv local django-example
 ```
 
 - Installing the dependencies
